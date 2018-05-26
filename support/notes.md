@@ -68,4 +68,15 @@ func (d deck) print() {
 }
 ```
 
+## ERROR HANDLING
+
+## STRUCTS
+
+## MAPS
+
+## INTERFACES
+
+## CHANNELS
+
+## ROUTINES
 
