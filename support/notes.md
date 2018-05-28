@@ -68,11 +68,59 @@ func (d deck) print() {
 }
 ```
 
+## POINTERS
+Use pointers with non-reference types (these are copied when passes as func args, and thus, their original address in memory needs pointing to) :
+- int
+- float
+- string
+- bool
+- struct
+
+Reference Types include:
+- slice
+- map
+- channel
+- pointer
+- function
+
 ## ERROR HANDLING
 
 ## STRUCTS
+- non-reference type, i.e. a value type
+-- these are copied when passed as args
+-- need to point to original address in memory
+- keys don't support indexing
+- values can vary in type
 
 ## MAPS
+- reference type
+- all keys must be the same type
+- all values must be the same type
+- all keys are indexed
+- maps are great for closely-related properties
+- can add/delete members
+
+```go
+    // ways to declare and assign maps
+    // 1
+    colors := map[string]string{
+		"red": "#FF0000",
+		"green": "#4bf745",
+	}
+
+    // 2
+	var colors map[string]string
+
+    // 3
+	colors := make(map[string]string)
+
+    // maps only use bracket[syntax]
+    // cannot access members with dot.syntax
+    colors["white"] = "#ffffff"
+    
+    // delete members
+	delete(colors, "white")
+```
 
 ## INTERFACES
 
